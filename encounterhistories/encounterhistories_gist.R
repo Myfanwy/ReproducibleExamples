@@ -1,7 +1,8 @@
 library(dplyr)
 library(lubridate)
 
-load('http://github.com/Myfanwy/ReproducibleExamples/encounterhistories/sample_fishdata.RData')
+download.file('https://github.com/Myfanwy/ReproducibleExamples/raw/master/encounterhistories/sample_fishdata.RData', destfile = "sample_fishdata.Rdata")
+load('sample_fishdata.RData')
 
 head(d)
 d$DateTimeUTC <- ymd_hms(d$DateTimeUTC)
