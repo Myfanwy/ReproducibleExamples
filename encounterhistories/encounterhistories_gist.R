@@ -1,4 +1,8 @@
-load('/Users/myfanwy/Dropbox/BlogPosts/rawposts_rmd/data-2016-03-28/sample_fishdata.RData')
+library(dplyr)
+library(lubridate)
+
+load('http://github.com/Myfanwy/ReproducibleExamples/encounterhistories/sample_fishdata.RData')
+
 head(d)
 d$DateTimeUTC <- ymd_hms(d$DateTimeUTC)
 d$TagID <- as.character(d$TagID)
